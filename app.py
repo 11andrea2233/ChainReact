@@ -62,7 +62,7 @@ else:
         st.text("Connect with me on LinkedIn 😊 [Andrea Arana](https://www.linkedin.com/in/andrea-a-732769168/)")
 
     elif page == "Chain React":
-        dataframed = pd.read_csv('https://raw.githubusercontent.com/ALGOREX-PH/Day-4-AI-First-Dataset-Live/refs/heads/main/Parcel_Information_Dataset.csv')
+        dataframed = pd.read_csv('https://raw.githubusercontent.com/11andrea2233/ChainReact/refs/heads/main/Transportation%20and%20distribution.csv')
         dataframed['combined'] = dataframed.apply(lambda row : ' '.join(row.values.astype(str)), axis = 1)
         documents = dataframed['combined'].tolist()
         embeddings = [get_embedding(doc, engine = "text-embedding-3-small") for doc in documents]
@@ -118,6 +118,9 @@ Examples
             if 'message' not in st.session_state:
                 st.session_state.message = []
                 st.session_state.message.append({"role": "system", "content": System_Prompt})
+                chat =  openai.ChatCompletion.create(model = "gpt-4o-mini", messages = st.session_state.messages, temperature=0.5, max_tokens=1500, top_p=1, frequency_penalty=0, presence_penalty=0)
+                response = chat.choices[0].message.content
+                st.session_state.messages.append({"role": "assistant", "content": response})
 
         initialize_conversation(System_Prompt)
 
@@ -131,6 +134,13 @@ Examples
         if user_message := st.chat_input("Ask me anything about Supply Chain and Logistics!"):
             with st.chat_message("user"):
                 st.markdown(user_message)
+            query_embedding = get_embedding(user_message, engine='text-embedding-3-small')
+            query_embedding_np = np.array([query_embedding]).astype('float32')    
+            _, indices = index.search(query_embedding_np, 2)
+            retrieved_docs = [documents[i] for i in indices[0]]
+            context = ' '.join(retrieved_docs)
+            structured_prompt = f"Context:\n{context}\n\nQuery:\n{user_message}\n\nResponse:"
+            chat =  openai.ChatCompletion.create(model = "gpt-4o-mini", messages = st.session_state.messages + [{"role": "user", "content": structured_prompt}], temperature=0.5, max_tokens=1500, top_p=1, frequency_penalty=0, presence_penalty=0)
             st.session_state.message.append({"role": "user", "content": user_message})
             chat = openai.ChatCompletion.create(
                 model="gpt-4o-mini",
