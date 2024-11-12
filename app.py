@@ -118,9 +118,9 @@ Examples
             if 'message' not in st.session_state:
                 st.session_state.message = []
                 st.session_state.message.append({"role": "system", "content": System_Prompt})
-                chat =  openai.ChatCompletion.create(model = "gpt-4o-mini", messages = st.session_state.messages, temperature=0.5, max_tokens=1500, top_p=1, frequency_penalty=0, presence_penalty=0)
+                chat =  openai.ChatCompletion.create(model = "gpt-4o-mini", messages = st.session_state.message, temperature=0.5, max_tokens=1500, top_p=1, frequency_penalty=0, presence_penalty=0)
                 response = chat.choices[0].message.content
-                st.session_state.messages.append({"role": "assistant", "content": response})
+                st.session_state.message.append({"role": "assistant", "content": response})
 
         initialize_conversation(System_Prompt)
 
@@ -140,7 +140,7 @@ Examples
             retrieved_docs = [documents[i] for i in indices[0]]
             context = ' '.join(retrieved_docs)
             structured_prompt = f"Context:\n{context}\n\nQuery:\n{user_message}\n\nResponse:"
-            chat =  openai.ChatCompletion.create(model = "gpt-4o-mini", messages = st.session_state.messages + [{"role": "user", "content": structured_prompt}], temperature=0.5, max_tokens=1500, top_p=1, frequency_penalty=0, presence_penalty=0)
+            chat =  openai.ChatCompletion.create(model = "gpt-4o-mini", messages = st.session_state.message + [{"role": "user", "content": structured_prompt}], temperature=0.5, max_tokens=1500, top_p=1, frequency_penalty=0, presence_penalty=0)
             st.session_state.message.append({"role": "user", "content": user_message})
             chat = openai.ChatCompletion.create(
                 model="gpt-4o-mini",
