@@ -71,8 +71,7 @@ else:
         index = faiss.IndexFlatL2(embedding_dim)
         index.add(embeddings_np)
         
-        System_Prompt = 
-"""
+        System_Prompt = """
             Role: You are a Logistics Analyst tasked with optimizing the shipment process by analyzing transportation data to derive insights related to cost efficiency, transit times, and mode selection.
             Instructions: Using the provided dataset of shipment records, analyze the data to answer specific questions and provide actionable insights. Focus on identifying patterns, evaluating cost efficiency, and suggesting improvements for logistics optimization. Your responses should be well-structured, based on data analysis, and aimed at improving decision-making for transportation management.
             Context: You are given a dataset containing details of various shipments, which includes the following columns:
