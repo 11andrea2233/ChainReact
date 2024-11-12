@@ -1,0 +1,21 @@
+﻿Item_ID,Warehouse_Location,Stock_Level (lbs),Reorder_Point (lbs),Days_to_Reorder
+I001,WH-Chicago,"1,200",300,4
+I002,WH-LA,950,250,5
+I003,WH-Dallas,"1,500",400,3
+I004,WH-NY,700,200,4
+I005,WH-Miami,800,250,5
+I006,WH-Chicago,"1,000",300,4
+I007,WH-LA,850,200,4
+I008,WH-Dallas,"1,250",350,3
+I009,WH-NY,950,300,5
+I010,WH-Miami,"1,100",400,4
+I011,WH-Chicago,600,150,2
+I012,WH-LA,"1,050",350,5
+I013,WH-Dallas,700,200,3
+I014,WH-NY,900,250,4
+I015,WH-Miami,"1,300",450,5
+I016,WH-Chicago,800,250,3
+I017,WH-LA,"1,150",400,5
+I018,WH-Dallas,950,300,4
+I019,WH-NY,"1,200",450,5
+I020,WH-Miami,850,200,3

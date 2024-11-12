@@ -1,0 +1,21 @@
+﻿Supplier_ID,Supplier_Name,Ingredient,Unit_Cost,Lead_Time (days)
+S001,Fresh Farms,Potatoes,$0.10/lb,7
+S002,Spice Masters,Salt,$0.02/lb,5
+S003,Flavors Unlimited,BBQ Seasoning,$0.20/lb,10
+S004,Green Packaging,Packaging Bags,$0.05/bag,8
+S005,Oil Co.,Vegetable Oil,$0.15/lb,6
+S006,Midwest Spices,Chili Powder,$0.30/lb,12
+S007,Dairy Delights,Cheese Powder,$0.50/lb,14
+S008,Farm Fresh Herbs,Onion Powder,$0.25/lb,5
+S009,Pure Vinegar,Vinegar,$0.05/lb,3
+S010,Prime Starch,Corn Starch,$0.08/lb,7
+S011,West Coast Oils,Sunflower Oil,$0.12/lb,8
+S012,Seasoning Hub,Ranch Seasoning,$0.40/lb,9
+S013,Bright Flavors,Sour Cream Powder,$0.55/lb,10
+S014,Spice Hub,Paprika,$0.22/lb,6
+S015,Flavor Wave,Garlic Powder,$0.18/lb,4
+S016,Pure Salt Co.,Sea Salt,$0.03/lb,5
+S017,PackItNow,Eco-Friendly Bags,$0.06/bag,9
+S018,Earth Seasonings,Pepper,$0.25/lb,7
+S019,Green Herbs,Chives,$0.35/lb,5
+S020,Color Natural,Natural Food Dye,$0.10/lb,6

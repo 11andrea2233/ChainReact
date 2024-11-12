@@ -1,0 +1,21 @@
+﻿Product_ID,Product_Name,Batch_Size (lbs),Production_Time (hrs),Quality_Check (%)
+P001,Classic Potato Chips,500,8,98.5
+P002,BBQ Flavored Chips,600,9,97
+P003,Sour Cream & Onion Chips,550,8,99
+P004,Salt & Vinegar Chips,450,7,95
+P005,Spicy Jalapeño Chips,500,8,96.5
+P006,Cheddar Cheese Chips,550,10,98
+P007,Ranch Flavored Chips,520,8,97.5
+P008,Lightly Salted Chips,480,7,98.5
+P009,Chili Lime Chips,500,9,96
+P010,Sea Salt & Cracked Pepper,470,8,99.2
+P011,Pickle-Flavored Chips,450,7,97.8
+P012,Buffalo Wing Chips,530,9,95.7
+P013,Lime & Chili Chips,500,9,96.8
+P014,Garlic & Herb Chips,520,7,98.9
+P015,Jalapeño & Cheese Chips,480,8,99.1
+P016,Honey BBQ Chips,510,10,96.7
+P017,Mediterranean Chips,450,9,97.3
+P018,Black Pepper Chips,480,8,98.1
+P019,Tandoori Spice Chips,500,9,97.5
+P020,Seaweed & Salt Chips,460,7,99.5
